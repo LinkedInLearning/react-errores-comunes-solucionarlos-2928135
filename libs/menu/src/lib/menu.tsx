@@ -12,7 +12,7 @@ export function Menu(props: MenuProps) {
 
   return (
     <div>
-      <h1>Welcome to Menu!</h1>
+      <h1>Platillos</h1>
       <ul>
         {dishes.map((dish) => (
           <li key={dish.id}>{dish.name}</li>
