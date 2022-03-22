@@ -1,5 +1,5 @@
 import styles from './app.module.scss';
-import { Route, Link } from 'react-router-dom';
+import { Route, Link, Redirect } from 'react-router-dom';
 import { Menu } from '@restaurant/menu';
 import { Cocina } from '@restaurant/cocina';
 import { Cuenta } from '@restaurant/cuenta';
@@ -42,6 +42,7 @@ export function App() {
       <Route path="/pedidos" component={Pedidos} />
       <Route path="/cuenta" component={Cuenta} />
       <Route path="/cocina" component={Cocina} />
+      <Redirect exact from="/" to="menu" />
     </div>
   );
 }
