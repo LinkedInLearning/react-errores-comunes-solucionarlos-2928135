@@ -27,6 +27,15 @@
     ]
   },
   "projects": {
+    "cocina": {
+      "tags": []
+    },
+    "cuenta": {
+      "tags": []
+    },
+    "docs": {
+      "tags": []
+    },
     "home": {
       "tags": []
     },
@@ -34,7 +43,10 @@
       "tags": [],
       "implicitDependencies": ["home"]
     },
-    "docs": {
+    "menu": {
+      "tags": []
+    },
+    "pedidos": {
       "tags": []
     }
   }

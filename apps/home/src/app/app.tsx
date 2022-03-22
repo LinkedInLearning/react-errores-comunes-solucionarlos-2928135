@@ -1,30 +1,52 @@
 import styles from './app.module.scss';
 
-export function App() {
-  const dishes = [
-    { id: 1, name: 'ceviche' },
-    { id: 2, name: 'tacos' },
-    { id: 3, name: 'hamburguesa' },
-  ];
+import { Route, Link } from 'react-router-dom';
 
+import { Menu } from '@restaurant/menu';
+
+import { Cocina } from '@restaurant/cocina';
+
+import { Cuenta } from '@restaurant/cuenta';
+
+import { Pedidos } from '@restaurant/pedidos';
+
+export function App() {
   return (
     <div className={styles.app}>
       <header className="flex">
-        <h1>Platillos</h1>
+        <h1>Restaurant</h1>
       </header>
       <main>
-        <div>
-          {/* Componente de Menú */}
+        <div role="navigation">
           <ul>
-            {dishes.map((dish) => (
-              <li key={dish.id}>{dish.name}</li>
-            ))}
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/menu">Menu</Link>
+            </li>
+            <li>
+              <Link to="/pedidos">Pedidos</Link>
+            </li>
+            <li>
+              <Link to="/cuenta">Cuenta</Link>
+            </li>
+            <li>
+              <Link to="/cocina">Cocina</Link>
+            </li>
           </ul>
         </div>
-        <div>{/* Componente de Cocina */}</div>
-        <div>{/* Componente de Cuenta */}</div>
-        <div>{/* Componente de Pedidos */}</div>
       </main>
+
+      <Route
+        path="/"
+        exact
+        render={() => <div>This is the generated root route. </div>}
+      />
+      <Route path="/menu" component={Menu} />
+      <Route path="/pedidos" component={Pedidos} />
+      <Route path="/cuenta" component={Cuenta} />
+      <Route path="/cocina" component={Cocina} />
     </div>
   );
 }

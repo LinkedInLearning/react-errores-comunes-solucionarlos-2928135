@@ -1,6 +1,69 @@
 {
   "version": 2,
   "projects": {
+    "cocina": {
+      "root": "libs/cocina",
+      "sourceRoot": "libs/cocina/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/cocina/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cocina"],
+          "options": {
+            "jestConfig": "libs/cocina/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "cuenta": {
+      "root": "libs/cuenta",
+      "sourceRoot": "libs/cuenta/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/cuenta/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/cuenta"],
+          "options": {
+            "jestConfig": "libs/cuenta/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "docs": {
+      "projectType": "application",
+      "root": "apps/docs",
+      "sourceRoot": "apps/docs/src",
+      "targets": {
+        "build": {
+          "executor": "@nx-plus/docusaurus:browser",
+          "options": {
+            "outputPath": "dist/apps/docs"
+          }
+        },
+        "serve": {
+          "executor": "@nx-plus/docusaurus:dev-server",
+          "options": {
+            "port": 3000
+          }
+        }
+      }
+    },
     "home": {
       "root": "apps/home",
       "sourceRoot": "apps/home/src",
@@ -8,9 +71,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/home",
             "index": "apps/home/src/index.html",
@@ -18,13 +79,8 @@
             "main": "apps/home/src/main.tsx",
             "polyfills": "apps/home/src/polyfills.ts",
             "tsConfig": "apps/home/tsconfig.app.json",
-            "assets": [
-              "apps/home/src/favicon.ico",
-              "apps/home/src/assets"
-            ],
-            "styles": [
-              "apps/home/src/styles.scss"
-            ],
+            "assets": ["apps/home/src/favicon.ico", "apps/home/src/assets"],
+            "styles": ["apps/home/src/styles.scss"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -68,20 +124,14 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": [
-            "{options.outputFile}"
-          ],
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "apps/home/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/home/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/home"
-          ],
+          "outputs": ["coverage/apps/home"],
           "options": {
             "jestConfig": "apps/home/jest.config.js",
             "passWithNoTests": true
@@ -109,32 +159,53 @@
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
-          "outputs": [
-            "{options.outputFile}"
-          ],
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "lintFilePatterns": [
-              "apps/home-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/home-e2e/**/*.{js,ts}"]
           }
         }
       }
     },
-    "docs": {
-      "projectType": "application",
-      "root": "apps/docs",
-      "sourceRoot": "apps/docs/src",
+    "menu": {
+      "root": "libs/menu",
+      "sourceRoot": "libs/menu/src",
+      "projectType": "library",
       "targets": {
-        "build": {
-          "executor": "@nx-plus/docusaurus:browser",
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
           "options": {
-            "outputPath": "dist/apps/docs"
+            "lintFilePatterns": ["libs/menu/**/*.{ts,tsx,js,jsx}"]
           }
         },
-        "serve": {
-          "executor": "@nx-plus/docusaurus:dev-server",
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/menu"],
           "options": {
-            "port": 3000
+            "jestConfig": "libs/menu/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "pedidos": {
+      "root": "libs/pedidos",
+      "sourceRoot": "libs/pedidos/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "outputs": ["{options.outputFile}"],
+          "options": {
+            "lintFilePatterns": ["libs/pedidos/**/*.{ts,tsx,js,jsx}"]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/pedidos"],
+          "options": {
+            "jestConfig": "libs/pedidos/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
