@@ -1,13 +1,8 @@
 import styles from './app.module.scss';
-
 import { Route, Link } from 'react-router-dom';
-
 import { Menu } from '@restaurant/menu';
-
 import { Cocina } from '@restaurant/cocina';
-
 import { Cuenta } from '@restaurant/cuenta';
-
 import { Pedidos } from '@restaurant/pedidos';
 
 export function App() {
