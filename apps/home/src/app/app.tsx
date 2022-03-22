@@ -13,11 +13,17 @@ export function App() {
         <h1>Platillos</h1>
       </header>
       <main>
-        <ul>
-          {dishes.map((dish) => (
-            <li key={dish.id}>{dish.name}</li>
-          ))}
-        </ul>
+        <div>
+          {/* Componente de Menú */}
+          <ul>
+            {dishes.map((dish) => (
+              <li key={dish.id}>{dish.name}</li>
+            ))}
+          </ul>
+        </div>
+        <div>{/* Componente de Cocina */}</div>
+        <div>{/* Componente de Cuenta */}</div>
+        <div>{/* Componente de Pedidos */}</div>
       </main>
     </div>
   );
