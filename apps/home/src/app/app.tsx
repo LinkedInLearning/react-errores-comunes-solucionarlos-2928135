@@ -1,7 +1,11 @@
 import styles from './app.module.scss';
 
 export function App() {
-  const dishes = ['ceviche', 'tacos', 'hamburguesa'];
+  const dishes = [
+    { id: 1, name: 'ceviche' },
+    { id: 2, name: 'tacos' },
+    { id: 3, name: 'hamburguesa' },
+  ];
 
   return (
     <div className={styles.app}>
@@ -11,7 +15,7 @@ export function App() {
       <main>
         <ul>
           {dishes.map((dish) => (
-            <li>{dish}</li>
+            <li key={dish.id}>{dish.name}</li>
           ))}
         </ul>
       </main>
