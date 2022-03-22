@@ -14,9 +14,8 @@ export function Menu(props: MenuProps) {
     <div>
       <h1>Platillos</h1>
       <ul>
-        {dishes.map((dish) => (
-          <li key={dish.id}>{dish.name}</li>
-        ))}
+        {dishes.length &&
+          dishes.map((dish) => <li key={dish.id}>{dish.name}</li>)}
       </ul>
     </div>
   );
