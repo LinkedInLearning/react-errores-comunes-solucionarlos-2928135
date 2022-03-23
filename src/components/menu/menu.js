@@ -1,4 +1,4 @@
-import { LINKS } from '../../helpers/constants';
+import { LINKS } from 'helpers/constants';
 
 export function Menu(props) {
   return (
