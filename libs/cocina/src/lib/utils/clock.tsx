@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import './clock.module.scss';
+import styles from './clock.module.scss';
 
 type ClockState = {
   time: Date;
@@ -28,7 +28,7 @@ export class Clock extends Component<ClockProps, ClockState> {
 
   render() {
     return (
-      <div>
+      <div className={styles.clock}>
         Reloj: <b>{this.props.name}</b>
         <p>{this.state.time.toLocaleTimeString()}</p>
       </div>
