@@ -1,15 +1,17 @@
 import { Component } from 'react';
 import './clock.module.scss';
 
-type clockState = {
+type ClockState = {
   time: Date;
 };
 
-interface clockProps {
+interface ClockProps {
   name: string;
 }
 
-export class Clock extends Component<clockProps, clockState> {
+export class Clock extends Component<ClockProps, ClockState> {
+  fullName = '';
+
   tick() {
     this.setState({
       time: new Date(),
