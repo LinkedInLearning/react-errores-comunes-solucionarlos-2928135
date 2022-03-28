@@ -2,8 +2,27 @@ import { Component } from 'react';
 import './summary.module.scss';
 
 interface SummaryProps {
-  quantity: unknown;
-  total: unknown;
+  quantity: number;
+  total: number;
+}
+
+type ClientType = 'regular' | 'frequent';
+
+interface Customer {
+  name: string;
+  email: string;
+  type: ClientType;
+}
+
+type Level = 'primary' | 'occasional';
+
+interface Provider {
+  name: string;
+  email: string;
+  phone: string;
+  level: Level;
+  pendingBill: number;
+  active: boolean;
 }
 
 class Summary extends Component<SummaryProps> {
