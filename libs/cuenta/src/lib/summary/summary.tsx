@@ -2,8 +2,8 @@ import { Component } from 'react';
 import './summary.module.scss';
 
 interface SummaryProps {
-  quantity: number;
-  total: number;
+  quantity: unknown;
+  total: unknown;
 }
 
 class Summary extends Component<SummaryProps> {
