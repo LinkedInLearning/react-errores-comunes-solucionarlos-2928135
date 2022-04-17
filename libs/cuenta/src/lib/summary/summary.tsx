@@ -1,5 +1,6 @@
+import { User } from '@restaurant/models';
 import { Component } from 'react';
-import { Customer, FullUser, Provider, User } from '../models/user.interfaces';
+import { Customer, FullUser, Provider } from '../models/user.interfaces';
 import './summary.module.scss';
 
 interface SummaryProps {

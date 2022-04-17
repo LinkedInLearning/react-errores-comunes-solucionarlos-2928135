@@ -1,12 +1,8 @@
+import { Dishes } from '@restaurant/models';
 import './menu.module.scss';
 
 /* eslint-disable-next-line */
 export interface MenuProps {}
-
-export interface Dishes {
-  id: number;
-  name: string;
-}
 
 export function Menu(props: MenuProps) {
   const dishes: Dishes[] = [];

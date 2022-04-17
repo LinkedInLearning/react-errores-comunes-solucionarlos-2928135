@@ -18,6 +18,7 @@
       "@restaurant/cocina": ["libs/cocina/src/index.ts"],
       "@restaurant/cuenta": ["libs/cuenta/src/index.ts"],
       "@restaurant/menu": ["libs/menu/src/index.ts"],
+      "@restaurant/models": ["libs/models/src/index.ts"],
       "@restaurant/pedidos": ["libs/pedidos/src/index.ts"]
     }
   },

@@ -1,10 +1,5 @@
 import { ClientType, Level } from './user.types';
 
-export interface User {
-  name: string;
-  email: string;
-}
-
 export interface FullUser {
   name: string;
   email: string;
