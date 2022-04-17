@@ -1,40 +1,10 @@
 import { Component } from 'react';
+import { Customer, FullUser, Provider, User } from '../models/user.interfaces';
 import './summary.module.scss';
 
 interface SummaryProps {
   quantity: number;
   total: number;
-}
-
-interface User {
-  name: string;
-  email: string;
-}
-
-interface FullUser {
-  name: string;
-  email: string;
-  city: string;
-  age: number;
-  tShirtSize: string;
-  branch: string;
-}
-
-type ClientType = 'regular' | 'frequent';
-
-interface Customer<T> {
-  info: T;
-  type: ClientType;
-}
-
-type Level = 'primary' | 'occasional';
-
-interface Provider<T> {
-  info: T;
-  phone: string;
-  level: Level;
-  pendingBill: number;
-  active: boolean;
 }
 
 class Summary extends Component<SummaryProps> {
