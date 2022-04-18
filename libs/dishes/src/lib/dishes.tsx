@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   fetchDishes,
   selectAllDishes,
+  selectDishesEntities,
   selectLoadingStatus,
 } from './+state/dishes.slice';
 
@@ -21,6 +22,8 @@ export function Dishes(props: DishesProps) {
   }, [dispatch]);
 
   const dishes = useSelector(selectAllDishes);
+  const entities = useSelector(selectDishesEntities);
+
   const loadingStatus = useSelector(selectLoadingStatus);
 
   if (loadingStatus === 'loading') return <p>Cargando...</p>;
