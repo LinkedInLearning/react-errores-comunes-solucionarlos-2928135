@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "ceviche",
+    "price": 123
+  },
+  {
+    "id": 2,
+    "name": "tacos",
+    "price": 456
+  },
+  {
+    "id": 3,
+    "name": "pizza",
+    "price": 743
+  },
+  {
+    "id": 4,
+    "name": "hamburguesas",
+    "price": 935
+  },
+  {
+    "id": 5,
+    "name": "tlayudas",
+    "price": 3546
+  }
+]

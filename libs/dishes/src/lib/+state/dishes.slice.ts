@@ -51,16 +51,16 @@ export const fetchDishes = createAsyncThunk(
      * Right now we just return an empty array.
      */
 
-    const dishes: Dish[] = [
-      { id: 1, name: 'ceviche', price: 123 },
-      {
-        id: 2,
-        name: 'tacos',
-        price: 456,
+    const headers = {
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
-    ];
+    };
 
-    return Promise.resolve(dishes);
+    const response = await fetch('/assets/dishes.json', headers);
+
+    return (await response.json()) as Dish[];
   }
 );
 
