@@ -7,22 +7,23 @@ import {
   PayloadAction,
 } from '@reduxjs/toolkit';
 import { RootState } from '@restaurant/models';
+import { Dish } from '../models/dish.interfaces';
 
 export const DISHES_FEATURE_KEY = 'dishes';
 
 /*
  * Update these interfaces according to your requirements.
  */
-export interface DishesEntity {
-  id: number;
-}
+// export interface DishesEntity {
+//   id: number;
+// }
 
-export interface DishesState extends EntityState<DishesEntity> {
+export interface DishesState extends EntityState<Dish> {
   loadingStatus: 'not loaded' | 'loading' | 'loaded' | 'error';
   error: string | null;
 }
 
-export const dishesAdapter = createEntityAdapter<DishesEntity>();
+export const dishesAdapter = createEntityAdapter<Dish>();
 
 /**
  * Export an effect using createAsyncThunk from
@@ -49,7 +50,17 @@ export const fetchDishes = createAsyncThunk(
      * For example, `return myApi.getDishess()`;
      * Right now we just return an empty array.
      */
-    return Promise.resolve([]);
+
+    const dishes: Dish[] = [
+      { id: 1, name: 'ceviche', price: 123 },
+      {
+        id: 2,
+        name: 'tacos',
+        price: 456,
+      },
+    ];
+
+    return Promise.resolve(dishes);
   }
 );
 
@@ -73,7 +84,7 @@ export const dishesSlice = createSlice({
       })
       .addCase(
         fetchDishes.fulfilled,
-        (state: DishesState, action: PayloadAction<DishesEntity[]>) => {
+        (state: DishesState, action: PayloadAction<Dish[]>) => {
           dishesAdapter.setAll(state, action.payload);
           state.loadingStatus = 'loaded';
         }
