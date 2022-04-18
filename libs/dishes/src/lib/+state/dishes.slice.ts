@@ -146,3 +146,8 @@ export const selectDishesEntities = createSelector(
   getDishesState,
   selectEntities
 );
+
+export const selectLoadingStatus = createSelector(
+  getDishesState,
+  (state) => state.loadingStatus
+);
