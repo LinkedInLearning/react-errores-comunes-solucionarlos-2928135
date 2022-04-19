@@ -1,5 +1,4 @@
 import {
-  createAsyncThunk,
   createEntityAdapter,
   createSelector,
   createSlice,
@@ -8,6 +7,7 @@ import {
 } from '@reduxjs/toolkit';
 import { RootState } from '@restaurant/models';
 import { Dish } from '../models/dish.interfaces';
+import { fetchDishes } from './dishes.thunks';
 
 export const DISHES_FEATURE_KEY = 'dishes';
 
@@ -24,45 +24,6 @@ export interface DishesState extends EntityState<Dish> {
 }
 
 export const dishesAdapter = createEntityAdapter<Dish>();
-
-/**
- * Export an effect using createAsyncThunk from
- * the Redux Toolkit: https://redux-toolkit.js.org/api/createAsyncThunk
- *
- * e.g.
- * ```
- * import React, { useEffect } from 'react';
- * import { useDispatch } from 'react-redux';
- *
- * // ...
- *
- * const dispatch = useDispatch();
- * useEffect(() => {
- *   dispatch(fetchDishes())
- * }, [dispatch]);
- * ```
- */
-export const fetchDishes = createAsyncThunk(
-  'dishes/fetchStatus',
-  async (_, thunkAPI) => {
-    /**
-     * Replace this with your custom fetch call.
-     * For example, `return myApi.getDishess()`;
-     * Right now we just return an empty array.
-     */
-
-    const headers = {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    };
-
-    const response = await fetch('/assets/dishes.json', headers);
-
-    return (await response.json()) as Dish[];
-  }
-);
 
 export const initialDishesState: DishesState = dishesAdapter.getInitialState({
   loadingStatus: 'not loaded',
@@ -120,34 +81,3 @@ export const dishesReducer = dishesSlice.reducer;
  * See: https://react-redux.js.org/next/api/hooks#usedispatch
  */
 export const dishesActions = dishesSlice.actions;
-
-/*
- * Export selectors to query state. For use with the `useSelector` hook.
- *
- * e.g.
- * ```
- * import { useSelector } from 'react-redux';
- *
- * // ...
- *
- * const entities = useSelector(selectAllDishes);
- * ```
- *
- * See: https://react-redux.js.org/next/api/hooks#useselector
- */
-const { selectAll, selectEntities } = dishesAdapter.getSelectors();
-
-export const getDishesState = (rootState: RootState): DishesState =>
-  rootState[DISHES_FEATURE_KEY];
-
-export const selectAllDishes = createSelector(getDishesState, selectAll);
-
-export const selectDishesEntities = createSelector(
-  getDishesState,
-  selectEntities
-);
-
-export const selectLoadingStatus = createSelector(
-  getDishesState,
-  (state) => state.loadingStatus
-);
