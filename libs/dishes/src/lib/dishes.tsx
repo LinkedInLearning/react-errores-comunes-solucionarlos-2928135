@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
-import './dishes.module.scss';
-import { Dish } from './models/dish.interfaces';
 import { useDispatch, useSelector } from 'react-redux';
 import {
-  selectLoadingStatus,
   selectAllDishes,
   selectDishesEntities,
+  selectLoadingStatus,
 } from './+state/dishes.selectors';
 import { fetchDishes } from './+state/dishes.thunks';
+import './dishes.module.scss';
 
 /* eslint-disable-next-line */
 export interface DishesProps {}

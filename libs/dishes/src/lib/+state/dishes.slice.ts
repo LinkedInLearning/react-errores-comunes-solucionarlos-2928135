@@ -1,11 +1,9 @@
 import {
   createEntityAdapter,
-  createSelector,
   createSlice,
   EntityState,
   PayloadAction,
 } from '@reduxjs/toolkit';
-import { RootState } from '@restaurant/models';
 import { Dish } from '../models/dish.interfaces';
 import { fetchDishes } from './dishes.thunks';
 
