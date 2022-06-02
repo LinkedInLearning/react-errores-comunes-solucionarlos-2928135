@@ -1,8 +1,8 @@
 # React: Errores comunes y cómo solucionarlos
 
-Este es el repositorio del curso de LinkedIn Learning [React: Errores comunes y cómo solucionarlos]. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
+Este es el repositorio del curso de LinkedIn Learning `React: Errores comunes y cómo solucionarlos`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![Nombre completo del curso][lil-thumbnail-url] 
+![image](https://user-images.githubusercontent.com/71371373/171652411-c7b2c118-a922-48ac-8260-d3b2c0ed1fc9.png)
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
