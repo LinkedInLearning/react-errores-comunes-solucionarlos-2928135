@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# React: Errores comunes y cómo solucionarlos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es el repositorio del curso de LinkedIn Learning `React: Errores comunes y cómo solucionarlos`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-## Available Scripts
+![COURSENAME][lil-thumbnail-url] 
 
-In the project directory, you can run:
+Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
-### `npm start`
+Aprende a solucionar los errores y problemas más comunes que se presentan a la hora de programar con React para expandir la eficiencia de tu código y evitar conflictos en el futuro, así como mejorar la calidad global de tus proyectos y tiempos de entrega. Durante el contenido formativo, aprenderás cómo los tipos de datos ayudan a resolver problemas tanto como la aplicación de una buena arquitectura del proyecto y de cómo la omisión de estos conceptos lleva a tener errores básicos que reducen la calidad y rendimiento del producto final. Al aprender a identificar este tipo de errores/patrones y cómo solucionarlos, obtendrás proyectos más robustos, estables y escalables.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instrucciones
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. Puedes usar el menú emergente de la rama en GitHub para cambiar a una rama específica y echar un vistazo al curso en esa etapa, o puedes añadir `/tree/nombre_de_la_rama` a la URL para ir a la rama a la que quieres acceder.
 
-### `npm test`
+## Ramas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Las ramas están estructuradas para corresponder a los vídeos del curso. La convención de nomenclatura es Capítulo#_Vídeo#. Por ejemplo, la rama denominada `02_03` corresponde al segundo capítulo y al tercer vídeo de ese capítulo. Algunas ramas tendrán un estado inicial y otro final. Están marcadas con las letras i («inicio») y f («fin»). La branch i tiene el mismo código que al principio del vídeo. La branch f tiene el mismo código que al final del vídeo. La rama master tiene el estado final del código que aparece en el curso.
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
+   - [software]
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
+3. [Instrucciones específicas del curso].
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Docente
 
-### `npm run eject`
+**Sergio Brito**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/sergio-brito).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[0]: # (Replace these placeholder URLs with actual course URLs)
+[lil-course-url]: https://www.linkedin.com/learning/react-errores-comunes-y-como-solucionarlos/errores-en-react
+[lil-thumbnail-url]: https://cdn.lynda.com/course/2928135/2928135-1654163622027-16x9.jpg
